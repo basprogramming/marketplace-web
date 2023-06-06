@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box !important;
+  font-family: "poppins", monospace;
+  scroll-behavior: smooth !important;
+}
+
+a {
+  text-decoration: none;
+  color: #58b25a;
+}
+
+button {
+  transition: 0.3s;
+}
+button:active {
+  transform: translateY(5px);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+b {
+  display: block;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.swiper {
+  width: 100%;
+  aspect-ratio: 16/7;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 10px;
+  left: 10px;
+}
+
+input.header {
+  width: 70%;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+button.header {
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  margin-left: -35px;
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 1rem;
+}
+
+.wallet {
+  position: relative;
+  width: 90%;
+  padding: 10px 40px 10px 10px;
+  background-color: white;
+  margin: -10px auto 0px;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+  /* jump to element */
+  display: flex;
+  justify-content: space-between;
+}
+
+.wallet i.QRCodeButton {
+  font-size: 3rem;
+  padding-right: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.menu {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 10px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-gap: 10px;
+}
+
+button.large {
+  padding: 10px 0;
+  background-color: #fff;
+  color: #757575;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+button.large i {
+  font-size: 1.4rem;
+}
+button.large:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.product {
+  background-color: #fff;
+  padding: 10px 10px 80px;
+}
+.product-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 10px;
+}
+
+.showcase .showcase-item {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.showcase img {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
+.black {
+  color: #333;
+}
+.blue {
+  color: #19a7ce;
+}
+.gray {
+  color: #757575;
+}
+.yellow {
+  color: #efd345;
+}
+.green {
+  color: #58b25a;
+}
+.red {
+  color: #f55050;
+}
+.purple {
+  color: #9727ab;
+}
+
+button.addToCart {
+  width: 100%;
+  background-color: #58b25a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button.addToCart:hover {
+  background-color: #459147;
+}
+
+.separator {
+  height: 10px;
+  background-color: #eee;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.navigation button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.navigation button:hover {
+  font-weight: bold;
+  color: #58b25a;
+}
+
+.QRCodeWrapper {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.QRCode {
+  position: fixed;
+  background-color: white;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.QRCodeHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0px;
+  vertical-align: baseline;
+}
+
+.QRCodeHeader i {
+  line-height: 26px;
+  font-size: 1.4rem;
+}
+
+.QR {
+  padding: 10px 20px;
+}

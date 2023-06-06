@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mobile</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Swiper JS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+
+        <!-- QR Code Library -->
+        <script src="lib/qrCode/qrcode.min.js"></script>
+    </head>
+
+    <body>
+        <div class="QRCodeWrapper" id="QRCodeWrapper">
+            <div class="QRCode">
+                <div class="QRCodeHeader">
+                    <label>Scan Kode QR</label>
+                    <i class="ri-close-line" onclick="toggleQRCode()"></i>
+                </div>
+                <hr />
+
+                <div class="QR" id="QR"></div>
+                <script type="text/javascript">
+                    var qrcode = new QRCode("QR", {
+                        text: "12345",
+                        width: 150,
+                        height: 150,
+                        colorDark: "#000000",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H,
+                    });
+                </script>
+            </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/slide-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/baju-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/slide-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/slide-3.jpg" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Search Bar, Troli, Chat -->
+        <div class="header">
+            <input
+                class="header"
+                type="text"
+                placeholder="Cari sepatu santai"
+            />
+            <button class="search"><i class="ri-search-line"></i></button>
+
+            <button class="header">
+                <i class="ri-shopping-cart-2-line"></i>
+            </button>
+            <button class="header"><i class="ri-message-3-line"></i></button>
+        </div>
+
+        <!-- Info -->
+        <div class="wallet">
+            <i
+                class="ri-qr-scan-line QRCodeButton gray"
+                onclick="toggleQRCode()"
+            ></i>
+            <div class="saldo">
+                <i class="ri-cash-line red"></i>
+                <strong>Rp. 100.000</strong>
+                <p class="gray">Top up Saldo</p>
+            </div>
+            <div class="coin">
+                <i class="ri-coin-line yellow"></i>
+                <strong>2.500</strong>
+                <p class="gray">Isi coin</p>
+            </div>
+        </div>
+
+        <!-- Menu [grid: 8] -->
+        <div class="menu">
+            <button class="large">
+                <i class="ri-file-list-3-fill green"></i>
+                <p>Tagihan</p>
+            </button>
+            <button class="large">
+                <i class="ri-t-shirt-fill blue"></i>
+                <p>Pakaian</p>
+            </button>
+            <button class="large">
+                <i class="ri-coupon-3-fill yellow"></i>
+                <p>Tiket</p>
+            </button>
+            <button class="large">
+                <i class="ri-headphone-fill black"></i>
+                <p>Asesoris</p>
+            </button>
+            <button class="large">
+                <i class="ri-mac-fill yellow"></i>
+                <p>Komputer</p>
+            </button>
+            <button class="large">
+                <i class="ri-gamepad-fill purple"></i>
+                <p>Mainan</p>
+            </button>
+            <button class="large">
+                <i class="ri-capsule-fill red"></i>
+                <p>Kesehatan</p>
+            </button>
+            <button class="large">
+                <i class="ri-seedling-fill green"></i>
+                <p>Kebun</p>
+            </button>
+        </div>
+
+        <!-- Menubar -->
+        <div class="navigation">
+            <button>
+                <i class="ri-home-5-line"></i>
+                <p>Beranda</p>
+            </button>
+            <button>
+                <i class="ri-vidicon-line"></i>
+                <p>Live</p>
+            </button>
+            <button>
+                <i class="ri-notification-3-line"></i>
+                <p>Notifikasi</p>
+            </button>
+            <button>
+                <i class="ri-user-line"></i>
+                <p>Akun</p>
+            </button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="product" id="product">
+            <div class="product-title">
+                <span>
+                    <i class="ri-coupon-fill"></i>
+                    <strong>Promo Hari Ini</strong>
+                </span>
+                <a href="#product"
+                    >Lihat Semua <i class="ri-arrow-right-s-line"></i
+                ></a>
+            </div>
+            <div class="showcase">
+                <div class="showcase-item">
+                    <img src="img/baju.jpg" />
+                    <p>Baju Impor</p>
+                    <b class="price">Rp. 57.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.8
+                        <span class="sold">&bullet; 50 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+                <div class="showcase-item">
+                    <img src="img/baju-2.jpg" />
+                    <p>Kaos Eceran</p>
+                    <b class="price">Rp. 35.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.9
+                        <span class="sold">&bullet; 32 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+                <div class="showcase-item">
+                    <img src="img/watch-1.jpg" />
+                    <p>Smartwatch</p>
+                    <b class="price">Rp. 357.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.7
+                        <span class="sold">&bullet; 12 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+                <div class="showcase-item">
+                    <img src="img/watch-2.jpg" />
+                    <p>Jam Klasik</p>
+                    <b class="price">Rp. 520.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.9
+                        <span class="sold">&bullet; 22 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+                <div class="showcase-item">
+                    <img src="img/earphone.jpg" />
+                    <p>Earphone Elegan</p>
+                    <b class="price">Rp. 310.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.8
+                        <span class="sold">&bullet; 16 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+                <div class="showcase-item">
+                    <img src="img/gamepad.jpg" />
+                    <p>Gamepad Mobile</p>
+                    <b class="price">Rp. 205.000</b>
+                    <p>
+                        <i class="ri-star-fill yellow"></i> 4.8
+                        <span class="sold">&bullet; 5 Terjual</span>
+                    </p>
+                    <p><i class="ri-truck-fill green"></i> Bebas Ongkir</p>
+                    <button class="addToCart" type="button">
+                        <i class="ri-shopping-cart-2-line"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                autoplay: {
+                    delay: 2000,
+                },
+            });
+
+            function toggleQRCode() {
+                $("#QRCodeWrapper").fadeToggle(500);
+            }
+        </script>
+    </body>
+</html>
